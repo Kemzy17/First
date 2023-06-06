@@ -260,11 +260,7 @@ body::-webkit-scrollbar-thumb {
 .home img {
   width: 350px;
   height: 500px;
-  animation-name: roll;
-  animation-duration: .0001s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  animation-direction: cycle;
+
 }
 .home-text {
   width: 50%;
@@ -286,28 +282,12 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(black, grey);
   color: #fff;
   box-shadow: 0px -7px 5px -2px #444;
-  /* animation-name: roll; */
 
 }
-@keyframes roll {
-  0%{
-    /* rotate: 0deg; */
-    transform: translateX(30px);
-  }
-  /* 50%{
-    rotate: 360deg;
-  } */
-  100%{
-    /* rotate: 360deg; */
-    transform: translateX(-30px);
-  }
-}
+
 .home-text a:hover {
-  /* background: linear-gradient(grey, black);
-  box-shadow: 0px 7px 5px 0px #444; */
-
-  /* transform: rotate3d(30, 2, 30, 15deg); */
-  rotate: 360deg;
+  background: linear-gradient(grey, black);
+  box-shadow: 0px 7px 5px 0px #444;
 }
 
 @media screen and (max-width: 768px) {
