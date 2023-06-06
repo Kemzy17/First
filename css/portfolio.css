@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&family=Source+Sans+Pro&family=Tajawal&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth scroll;
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #fff;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+body::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #111;
+}
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Navbar section */
+
+.nav {
+  width: 95%;
+  height: 65px;
+  margin: auto;
+  position: fixed;
+  left: 2.5%;
+  top: 10px;
+  line-height: 65px;
+  text-align: center;
+  /* background-color: rgba(0,0,255,0.8); */
+  background-color: #fff;
+  /* box-shadow: 0px 5px 56px rgb(137, 135, 135); */
+  transition: 0.3s ease;
+  transition: 0.3s ease;
+  z-index: 100;
+}
+.shadow {
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0px 3px 36px #646363;
+  transition: 0.3s ease;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.nav div.logo {
+  width: 180px;
+  height: 10px;
+  position: absolute;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+.nav div.logo a:hover {
+  color: #c0c0c0;
+}
+
+.nav div.main_list {
+  width: 600px;
+  height: 65px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+}
+
+.nav div.main_list ul li {
+  width: 120px;
+  height: 65px;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #111;
+  line-height: 65px;
+  text-transform: uppercase;
+}
+
+.nav div.main_list ul li a:hover {
+  color: #c0c0c0;
+}
+
+.nav div.media_button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  display: none;
+}
+
+.nav div.media_button button.main_media_button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span {
+  width: 98%;
+  height: 2px;
+  display: block;
+  background-color: #111;
+  margin-top: 9px;
+  margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1) {
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+  /* background-color: #c0c0c0; */
+  background-color: #111;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2) {
+  transform: rotateY(180deg);
+  transition: all 0.4s;
+  /* background-color: #c0c0c0; */
+  background-color: #111;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3) {
+  transform: rotateY(180deg);
+  transition: all 0.3s;
+  /* background-color: #c0c0c0; */
+  background-color: #111;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+  transform: rotate3d(0, 0, 1, 45deg);
+  position: absolute;
+  margin: 0;
+  top: 20px;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+  display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+  transform: rotate3d(0, 0, 1, -45deg);
+  position: absolute;
+  margin: 0;
+  top: 20px;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+  transform: rotate3d(0, 0, 1, 135deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+  transform: rotate3d(0, 0, 1, -135deg);
+}
+
+/* Home section */
+
+/* Medai qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+
+  .nav div.logo {
+    margin-left: 15px;
+  }
+
+  .nav div.main_list {
+    width: 100%;
+    margin-top: 65px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .nav div.show_list {
+    height: 200px;
+  }
+
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    top: 85px;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to left, grey, black);
+    opacity: 0.9;
+  }
+
+  .nav div.main_list ul li {
+    width: 100%;
+    height: 40px;
+    /* background-color: rgba(0, 0, 255, 0.8); */
+    /* background-color: #222; */
+  }
+
+  .nav div.main_list ul li a {
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+    height: 40px;
+    display: table;
+    color: #fff;
+  }
+  .nav div.main_list ul li a:hover {
+    background: black;
+  }
+
+  .nav div.media_button {
+    display: block;
+  }
+}
+.about-intro {
+  margin: 58px auto 0px auto;
+  padding: 7%;
+  /* background: linear-gradient(to right, black 50%, grey 50%); */
+  background: linear-gradient(to right, #111 50%, #999);
+}
+@media screen and (max-width: 768px) {
+  .about-intro {
+    padding: 10%;
+  }
+}
+
+.about-intro h1 {
+  /* color: #fff; */
+  font-size: 65px;
+  /* -webkit-text-stroke: 1px grey; */
+  background-image: linear-gradient(to right, white, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .about-intro h1 {
+    font-size: 50px;
+  }
+  .about-intro {
+    padding: 25% 10%;
+  }
+}
+.about-intro a {
+  color: #fff;
+  text-decoration: none;
+}
+.about-intro span {
+  color: #fff;
+}
+.about-intro div {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 10px;
+}
+.port-sec {
+  background: linear-gradient(to left, transparent, #eee);
+  /* background: conic-gradient(to left, blue, #111, red); */
+}
+.portfolio {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 0;
+}
+.list {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid#989;
+  gap: 3%;
+  margin: 10px 0;
+}
+.list:hover {
+  /* border-bottom: 2px solid #989; */
+  box-shadow: -7px 7px 10px -5px #888;
+}
+.list img {
+  width: 200px;
+}
+.list a {
+  color: #111;
+  font-weight: 900;
+  text-decoration: none;
+}
+.list a:hover {
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+.list div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list div p {
+  line-height: 25px;
+  color: #555;
+}
+@media only screen and (max-width: 768px) {
+  .list img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .list img {
+    width: 50px;
+    height: 50px;
+  }
+}
+footer {
+  padding: 4% 9%;
+  /* background-color: #000; */
+  /* background: linear-gradient(to left, #666, #111); */
+  /* background: conic-gradient(#222, #555, #222); */
+  /* background: radial-gradient(#000, #222, #444); */
+  background-color: #111;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* justify-content: space-around; */
+}
+.about-page,
+.newsletter {
+  width: 35%;
+}
+.social {
+  width: 24%;
+}
+.about-page {
+  color: #ccc;
+}
+.about-page h3 {
+  color: #fff;
+}
+.newsletter form {
+  width: 100%;
+  display: flex;
+  color: #ccc;
+}
+.newsletter h3 {
+  color: #fff;
+}
+.newsletter form input {
+  width: 88%;
+  outline: none;
+  padding: 7px;
+}
+.newsletter form button {
+  width: 10%;
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+.newsletter form button:hover {
+  border: 1px solid #999;
+}
+.social h3 {
+  color: #fff;
+}
+.social a {
+  text-decoration: none;
+}
+.social img {
+  width: 25px;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.social-links a img:hover {
+  /* transform: scale(1.2, 1.2); */
+  /* transform: rotateY(360deg); */
+  /* transform: rotateX(90deg); */
+  transform: translateY(-5px);
+  rotate: 10deg;
+}
+@media screen and (max-width: 1060px) {
+  footer {
+    padding: 2% 5%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .newsletter {
+    width: 40%;
+  }
+  .newsletter {
+    margin-left: auto;
+  }
+  .about-page {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 715px) {
+  .about-page,
+  .newsletter,
+  .social {
+    width: 100%;
+  }
+}
